@@ -26,7 +26,7 @@ const menu = [
 
 const headerElement = document.getElementById("header");
 
-// Component
+// Component = thành phần
 function headerRender(menu) {
   let contentMenu = "";
   menu.forEach((item) => {
@@ -45,3 +45,17 @@ function headerRender(menu) {
 
 // * render = kết xuất giao diện
 headerElement.innerHTML = headerRender(menu);
+
+/**
+ * input:
+ * - button cần theo dõi
+ * - Chỗ để hiển thị ra số lần bấm
+ */
+
+const btnCount = document.getElementById("btnCount");
+const viewCount = document.getElementById("viewCount");
+let count = 0; // state
+btnCount.addEventListener("click", function () {
+  count++; // state
+  viewCount.innerText = count;
+});
