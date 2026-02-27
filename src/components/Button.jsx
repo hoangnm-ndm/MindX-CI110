@@ -2,7 +2,6 @@ import React from "react";
 import "./Button.css";
 
 const Button = (props) => {
-  console.log(props);
   /**
    * * props là một đối tượng được khai báo khi truyền vào component.
    * * Props thì thường chứa các thuộc tính

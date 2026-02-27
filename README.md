@@ -13,3 +13,9 @@
 - Mở trình duyệt và truy cập `http://localhost:5173/` để xem kết quả.
 
 ## Thực hành tạo các component Header, Footer, Main và sử dụng chúng trong App.js
+
+**Trọng tâm buổi 3:**
+
+- JSX?
+- Component là gì?
+- Props là gì? Cách dùng props để truyền dữ liệu giữa các component?

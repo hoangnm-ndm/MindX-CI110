@@ -20,7 +20,8 @@ const ProductItem = ({ product }) => {
   );
 };
 
-const Main = () => {
+const Main = ({ data }) => {
+  console.log(data);
   return (
     <div>
       <h1>Noi dung chinh</h1>
