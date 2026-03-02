@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  /* colors */
+  --color-primary: #137fec;
+  --color-background-light: #f6f7f8;
+  --color-background-dark: #101922;
+
+  /* font */
+  --font-display: "Manrope", sans-serif;
+
+  /* border radius */
+  --radius: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* dark mode strategy = class */
+@custom-variant dark (&:where(.dark, .dark *));

@@ -1,4 +1,6 @@
-# Day 03
+# Ghi chú buổi học
+
+## Day 03
 
 1. WHY: Hiểu về tư duy và lý do tại sao phải dùng thư viện thay cho code thuần?
 2. WHAT: Các khái niệm chính và cách mà React làm cho mọi thứ trở lên dễ, nhanh.
@@ -7,3 +9,13 @@
    - Cấu trúc thư mục và ý nghĩa của từng file.
    - Cách style trong React
    - Props
+
+## Day 05
+
+(15 phút)
+
+- Cài đặt tailwindcss cho vite/react
+- Cài đặt antd
+
+Sử dụng các component phổ biến để xây dựng giao diện bài tập todo list:
+https://stitch.withgoogle.com/projects/8683515590630104202
