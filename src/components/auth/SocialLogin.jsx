@@ -2,15 +2,15 @@ export default function SocialLogin() {
   return (
     <>
       <div className="my-8 flex items-center">
-        <div className="flex-grow border-t border-slate-100 dark:border-slate-800" />
+        <div className="grow border-t border-slate-100 dark:border-slate-800" />
         <span className="mx-4 text-slate-400 text-xs font-medium uppercase tracking-wider">
           or join with
         </span>
-        <div className="flex-grow border-t border-slate-100 dark:border-slate-800" />
+        <div className="grow border-t border-slate-100 dark:border-slate-800" />
       </div>
 
       <div className="flex justify-center gap-4">
-        <button className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+        <button className="flex h-12 w-12 items-center justify-center rounded border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
           {/* Google SVG */}
           <svg className="h-5 w-5" viewBox="0 0 24 24">
             <path
