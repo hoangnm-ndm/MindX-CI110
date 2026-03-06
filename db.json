@@ -11,6 +11,12 @@
       "password": "$2a$10$aGLE2.cXf0L8RfNOjb5oeeT/4SNaOXigzjONBZzaDv48a78l2uXhK",
       "fullname": "hoang nguyen",
       "id": 2
+    },
+    {
+      "email": "hoang11@gmail.com",
+      "password": "$2a$10$fFQYl6jnhQDihh/OwhK6VuRr.XejY6M4P/u/MmtEq1NmBmBhdfx3q",
+      "fullname": "hoang nguyen",
+      "id": 3
     }
   ]
 }

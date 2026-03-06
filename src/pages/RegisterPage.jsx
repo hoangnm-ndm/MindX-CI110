@@ -4,6 +4,7 @@ import AuthHeader from "@/components/auth/AuthHeader";
 import AuthForm from "@/components/auth/AuthForm";
 import SocialLogin from "@/components/auth/SocialLogin";
 import RegisterForm from "../components/auth/RegisterForm";
+import LoginForm from "../components/auth/LoginForm";
 
 export default function RegisterPage() {
   return (
@@ -12,6 +13,7 @@ export default function RegisterPage() {
         <AuthHeader />
         {/* <AuthForm /> */}
         <RegisterForm />
+        <LoginForm />
         <SocialLogin />
       </AuthCard>
     </AuthLayout>

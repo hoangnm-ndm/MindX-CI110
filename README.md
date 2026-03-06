@@ -43,3 +43,11 @@ https://stitch.withgoogle.com/projects/8683515590630104202
   "users": []
 }
 ```
+
+- Cài đặt và cấu hình sử dụng axios thay cho fetch
+  `npm install axios`
+
+- Cài thêm react-hook-form để quản lý form dễ dàng hơn
+  `npm install react-hook-form`
+- Có thể sử dụng thêm zod và @hookform/resolvers để validate form tốt hơn
+  `npm install zod @hookform/resolvers`
