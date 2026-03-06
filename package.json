@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"json-server --watch db.json -p 3000 -m ./node_modules/json-server-auth\" \"vite\"",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -13,6 +13,9 @@
     "@dnd-kit/react": "^0.3.2",
     "@tailwindcss/vite": "^4.2.1",
     "antd": "^6.3.0",
+    "concurrently": "^9.2.1",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

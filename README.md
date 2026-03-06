@@ -19,3 +19,27 @@
 
 Sử dụng các component phổ biến để xây dựng giao diện bài tập todo list:
 https://stitch.withgoogle.com/projects/8683515590630104202
+
+## Day 6
+
+- Cài đặt json-server@0.17.4, json-server-auth
+
+`npm install json-server@0.17.4 json-server-auth concurrently`
+
+- Cập nhật `package.json`
+
+```json
+"scripts": {
+  "dev": "concurrently \"json-server --watch db.json -p 3000 -m ./node_modules/json-server-auth\" \"vite\"",
+},
+```
+
+- Chạy `npm run dev` để khởi động cả json-server và vite cùng lúc
+
+- Vào `db.json` thêm dữ liệu mẫu
+
+```json
+{
+  "users": []
+}
+```

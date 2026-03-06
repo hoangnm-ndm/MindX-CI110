@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "email": "hoang@gmail.com",
+      "password": "$2a$10$2p6dDmtUqVfAwYjWqipcDeq6.6PtcCBsAb0BTesAV.ADVtJOi9fgG",
+      "fullname": "hoang nguyen",
+      "id": 1
+    },
+    {
+      "email": "111@gmail.com",
+      "password": "$2a$10$aGLE2.cXf0L8RfNOjb5oeeT/4SNaOXigzjONBZzaDv48a78l2uXhK",
+      "fullname": "hoang nguyen",
+      "id": 2
+    }
+  ]
+}
