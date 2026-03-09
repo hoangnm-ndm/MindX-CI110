@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { getProducts } from "../api/productApi";
 import { toast } from "react-toastify";
+import ProductDetail from "../components/ProductDetail";
 
 const ShopPage = () => {
   const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState(null);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -19,6 +21,11 @@ const ShopPage = () => {
 
   const handleAddToCart = (data) => {
     toast.success(`${data.title} được thêm vào giỏ hàng thành công!`);
+  };
+
+  const handleQuickView = (product) => {
+    console.log(product);
+    setProduct(product);
   };
 
   return (
@@ -38,6 +45,7 @@ const ShopPage = () => {
             <div
               key={item.id}
               className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden group"
+              onClick={() => handleQuickView(item)}
             >
               {/* Image */}
               <div className="aspect-square overflow-hidden bg-gray-50">
@@ -86,6 +94,8 @@ const ShopPage = () => {
           </button>
         </div>
       </div>
+
+      {product && <ProductDetail product={product} />}
     </div>
   );
 };
