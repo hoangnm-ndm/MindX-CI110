@@ -51,3 +51,8 @@ https://stitch.withgoogle.com/projects/8683515590630104202
   `npm install react-hook-form`
 - Có thể sử dụng thêm zod và @hookform/resolvers để validate form tốt hơn
   `npm install zod @hookform/resolvers`
+
+## Day 7
+
+- Cài axios:
+  `npm install axios`
