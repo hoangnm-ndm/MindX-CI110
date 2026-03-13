@@ -19,3 +19,19 @@
 - JSX?
 - Component là gì?
 - Props là gì? Cách dùng props để truyền dữ liệu giữa các component?
+
+## Day 08
+
+4 bước để thiết lập và sử dụng context trong React
+
+- **Bước 1:** Khai báo Context sử dụng `createContext()`
+- **Bước 2:** Tạo Provider component để cung cấp giá trị cho context.
+- **Bước 3:** Mang Provider component bọc các component con mà bạn muốn chia sẻ giá trị context.
+- **Bước 4:** Sử dụng `useContext(ContextName)` hook để truy cập giá trị từ context trong các component con.
+
+**Các trường hợp nên sử dụng useContext:**
+
+- Sử dụng set Theme,
+- Sử dụng set Language,
+- Sử dụng share và quản lý giỏ hàng.
+- Sử dụng share và quản lý thông tin người dùng, authentication.
