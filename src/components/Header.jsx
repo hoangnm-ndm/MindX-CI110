@@ -8,8 +8,16 @@ const Header = () => {
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
+
           <li>
-            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/about">About</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+          <li>
+            <NavLink to="/auth/login">Login</NavLink>
           </li>
           {/*  http://localhost:5173/login */}
           <li>
