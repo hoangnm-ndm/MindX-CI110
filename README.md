@@ -35,3 +35,58 @@
 - Sử dụng set Language,
 - Sử dụng share và quản lý giỏ hàng.
 - Sử dụng share và quản lý thông tin người dùng, authentication.
+
+## Day 09:
+
+### Bước 1: Cài đặt
+
+`npm i react-router`
+
+### Bước 2: Dùng `BrowserRouter` để bọc toàn bộ ứng dụng của bạn trong `index.js` hoặc `App.js`
+
+```jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { BrowserRouter } from "react-router";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+```
+
+### Bước 3: Sử dụng `Routes` và `Route` để định nghĩa các tuyến đường trong ứng dụng của bạn
+
+```jsx
+<Routes>
+  <Route path="" element={<Home />} />
+  <Route path="/profile" element={<Profile />} />
+  <Route path="/login" element={<Login />} />
+</Routes>
+```
+
+### Bước 4: Sử dụng Link/NavLink để điều hướng giữa các trang
+
+```jsx
+<header>
+  <nav>
+    <ul className="flex justify-between items-center p-2">
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
+      {/*  http://localhost:5173/login */}
+      <li>
+        <Link to="/profile">Profile</Link>
+      </li>
+    </ul>
+  </nav>
+</header>
+```
