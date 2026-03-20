@@ -18,3 +18,7 @@
 
 /* dark mode strategy = class */
 @custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  color: #002c69;
+}

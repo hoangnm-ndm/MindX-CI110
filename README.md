@@ -56,3 +56,19 @@ https://stitch.withgoogle.com/projects/8683515590630104202
 
 - Cài axios:
   `npm install axios`
+
+## Day 10
+
+```bash
+npm i react-hook-form @hookform/resolvers zod
+
+npm i json-server@0.17.0 json-server-auth concurrently
+```
+
+- Cập nhật `package.json`:
+
+```json
+  "scripts": {
+    "dev": "concurrently \"json-server --watch db.json -p 3000 -m ./node_modules/json-server-auth\" \"vite\"",
+  },
+```

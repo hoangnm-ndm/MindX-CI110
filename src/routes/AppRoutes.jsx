@@ -31,6 +31,20 @@ const router = createBrowserRouter([
     children: AdminRoutes,
   },
 
+  // * Dành cho super admin
+  {
+    path: "/super-admin",
+    // * Hãy thiết lập một protected route ở đây để chỉ cho phép admin truy cập vào các route con bên dưới
+    element: (
+      <ProtectedRoute roles={["superAdmin"]}>
+        <LayoutAdmin />
+      </ProtectedRoute>
+    ),
+    children: AdminRoutes,
+    // * Nếu super admin có cùng quyền truy cập với admin thì có thể sử dụng lại AdminRoutes hoặc tạo một route riêng nếu cần thiết
+    // * Thường super admin là giám đốc - có quyền xoá người dùng, kích người dùng khỏi hệ thống hoặc thay đổi permission của người dùng nên có thể tạo một route riêng để quản lý người dùng
+  },
+
   // * Dành cho authentication
   {
     path: "/auth",

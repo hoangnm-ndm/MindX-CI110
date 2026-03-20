@@ -2,21 +2,19 @@
   "users": [
     {
       "email": "hoang@gmail.com",
-      "password": "$2a$10$2p6dDmtUqVfAwYjWqipcDeq6.6PtcCBsAb0BTesAV.ADVtJOi9fgG",
-      "fullname": "hoang nguyen",
-      "id": 1
+      "password": "$2a$10$43PHfjcgb/sEYT9qA4MfXeZcpK.hRH/foLmy74fsVlY4DKT.iY.J.",
+      "fullname": "hoangminh",
+      "confirmPassword": "111111",
+      "id": 1,
+      "role": "admin"
     },
     {
-      "email": "111@gmail.com",
-      "password": "$2a$10$aGLE2.cXf0L8RfNOjb5oeeT/4SNaOXigzjONBZzaDv48a78l2uXhK",
-      "fullname": "hoang nguyen",
-      "id": 2
-    },
-    {
-      "email": "hoang11@gmail.com",
-      "password": "$2a$10$fFQYl6jnhQDihh/OwhK6VuRr.XejY6M4P/u/MmtEq1NmBmBhdfx3q",
-      "fullname": "hoang nguyen",
-      "id": 3
+      "email": "hoang1@gmail.com",
+      "password": "$2a$10$YB8LE1k8yRhwCZQdNlwTW.dshlX8kh2j.8pjnvQ0pFusvv8n8x3zC",
+      "fullname": "hoangnguyen",
+      "confirmPassword": "111111",
+      "id": 2,
+      "role": "student"
     }
   ]
 }
