@@ -1,43 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import useFetch from "../../hooks/useFetch";
+import { useQuery } from "@tanstack/react-query";
 import api from "../../api";
 
-// * Custome hook useFetch:
-// * input: url.
-// * output: { data, loading, error }.
-
-const useFetch = (url) => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const response = await api.get(url);
-        setData(response.data);
-        setLoading(false);
-      } catch (err) {
-        setError("Failed to fetch data. Please try again later.");
-        setLoading(false);
-        console.error("Error fetching data:", err);
-      }
-    };
-    fetchData();
-  }, [url]);
-
-  return { data, loading, error };
+const fetchProducts = async () => {
+  const { data } = await api.get("/products");
+  return data;
 };
 
 const HomePage = () => {
-  const { data: products, loading, error } = useFetch("/products");
+  // const { data: products, loading, error } = useFetch("/products");
 
-  if (loading) {
+  const {
+    isPending,
+    error,
+    data: products,
+  } = useQuery({
+    queryKey: ["products"],
+    queryFn: fetchProducts,
+    staleTime: 1000 * 60 * 5, // 5 minutes
+    refetchOnWindowFocus: false, // Don't refetch when the window regains focus
+  });
+
+  if (isPending) {
     return <p>Loading products...</p>;
   }
 
   if (error) {
-    return <p className="text-red-600">{error}</p>;
+    return <p className="text-red-600">{error.message}</p>;
   }
 
   return (

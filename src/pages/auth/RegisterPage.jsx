@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { registerAuthSchema } from "../../validation/authValidation";
 import { registerAuth } from "../../api/apiAuth";
 import { toast } from "react-toastify";
+import { useMutation } from "@tanstack/react-query";
 
 const RegisterPage = () => {
   const nav = useNavigate();
@@ -24,11 +25,24 @@ const RegisterPage = () => {
       toast.success(
         res.message || "Registration successful! Please login to continue."
       );
-      nav("/auth/login");
+      // nav("/auth/login");
     } catch (error) {
       toast.error(error.response?.data?.message || "Registration failed!");
     }
   };
+
+  const mutation = useMutation({
+    mutationFn: registerAuth,
+    onSuccess: (res) => {
+      toast.success(
+        res.message || "Registration successful! Please login to continue."
+      );
+      nav("/auth/login");
+    },
+    onError: (error) => {
+      toast.error(error.response?.data?.message || "Registration failed!");
+    },
+  });
 
   return (
     <div className="min-h-screen flex">
@@ -145,9 +159,14 @@ const RegisterPage = () => {
             <button
               type="submit"
               className="w-full bg-[#0f66df] hover:bg-[#0c54b8] text-white py-2 rounded-lg font-semibold transition"
+              disabled={mutation.isLoading}
             >
               Register now
             </button>
+
+            {mutation.isError && (
+              <div>An error occurred: {mutation.error.message}</div>
+            )}
           </form>
         </div>
       </div>
