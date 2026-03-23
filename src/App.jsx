@@ -10,6 +10,7 @@ import ClientLayout from "./components/ClientLayout";
 import About from "./pages/client/About";
 import Contact from "./pages/client/Contact";
 import ProductDetail from "./pages/client/ProductDetail";
+import TestUseEffect from "./pages/TestUseEffect";
 
 function App() {
   return (
@@ -25,8 +26,11 @@ function App() {
           {/* http://localhost:5173/product-detail/4 */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/test-lifecycle" element={<TestUseEffect />} />
           {/* ... */}
         </Route>
+
+        <Route path="/test-lifecycle" element={<TestUseEffect />} />
 
         <Route path="/auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
