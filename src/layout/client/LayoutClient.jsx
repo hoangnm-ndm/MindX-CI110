@@ -6,7 +6,6 @@ import { Outlet } from "react-router";
 const LayoutClient = () => {
   return (
     <div>
-      <h1>Hello Client</h1>
       <HeaderClient />
       <Outlet />
       <FooterClient />
