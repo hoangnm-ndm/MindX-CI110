@@ -21,7 +21,9 @@ const RegisterPage = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await registerAuth(data);
+      data.confirmPassword = undefined;
+
+      const res = await registerAuth({ ...data, role: "member" });
       toast.success(
         res.message || "Registration successful! Please login to continue."
       );

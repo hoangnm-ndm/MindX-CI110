@@ -1,6 +1,5 @@
-import React from "react";
-import useFetch from "../../hooks/useFetch";
 import { useQuery } from "@tanstack/react-query";
+import React from "react";
 import api from "../../api";
 
 const fetchProducts = async () => {
@@ -9,8 +8,6 @@ const fetchProducts = async () => {
 };
 
 const HomePage = () => {
-  // const { data: products, loading, error } = useFetch("/products");
-
   const {
     isPending,
     error,
